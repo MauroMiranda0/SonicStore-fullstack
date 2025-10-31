@@ -1,14 +1,13 @@
 import Header from './components/Header/Header.jsx';
-import HeroBanner from './components/HeroBanner/HeroBanner.jsx'; // 1. Importar el componente
 import Footer from './components/Footer/Footer.jsx';
+import HomePage from './pages/HomePage.jsx'; // 1. Importar HomePage
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <HeroBanner /> {/* 2. Añadir el componente aquí */}
-        {/* Más adelante aquí irán las otras secciones de la página */}
+        <HomePage /> {/* 2. Renderizar la página de inicio aquí */}
       </main>
       <Footer />
     </>
