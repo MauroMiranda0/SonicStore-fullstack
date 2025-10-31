@@ -1,0 +1,73 @@
+.hero {
+  /* Usaremos un placeholder por ahora. Lo ideal es usar una imagen propia en la carpeta /assets */
+  background: url('https://via.placeholder.com/1500x700.png?text=Belleza+y+Moda') no-repeat center center/cover;
+  height: 60vh; /* Ajustamos la altura para que no sea tan dominante */
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  position: relative; /* Necesario para el overlay */
+}
+
+/* Creamos un "overlay" oscuro para mejorar la legibilidad del texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(45, 20, 44, 0.6); /* --background-dark con opacidad */
+    z-index: 1;
+}
+
+.hero__content {
+  background-color: transparent; /* El fondo lo da el overlay */
+  padding: 2rem;
+  border-radius: 5px;
+  position: relative; /* Para que el contenido esté por encima del overlay */
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-white); /* Sobrescribimos el color de heading global */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Botón principal */
+.btn.btn--primary {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--color-white);
+}
+
+.btn.btn--primary:hover {
+    background-color: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+}
+
+/* ======== ESTILOS RESPONSIVE PARA HERO ======== */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
