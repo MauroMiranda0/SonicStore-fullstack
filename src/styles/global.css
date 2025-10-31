@@ -1,0 +1,71 @@
+/* src/styles/global.css */
+
+/* ======== VARIABLES DE COLOR Y FUENTES ======== */
+:root {
+  /* Tu paleta de colores personalizada */
+  --primary-color: #EE4540;
+  --secondary-color: #C72C41;
+  --text-heading: #801336;
+  --background-dark: #2D142C;
+  --background-deep: #510A32;
+  --light-bg: #FFF8F7;
+  
+  /* Colores base para texto y bordes */
+  --color-text: #333333;
+  --color-text-light: #777777;
+  --color-border: #e5e5e5;
+  --color-white: #ffffff;
+  
+  /* Fuentes y medidas */
+  --font-family-base: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --container-width: 1200px;
+  --spacing-unit: 2rem;
+}
+
+/* ======== RESET Y ESTILOS GLOBALES ======== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--light-bg); /* Usamos tu color de fondo claro */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  color: var(--secondary-color); /* Un color con más contraste de tu paleta */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading); /* Color de encabezados de tu paleta */
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+section {
+  padding: var(--spacing-unit) 0;
+}
